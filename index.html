@@ -16,10 +16,55 @@
     height: 500px;
     border: 1px solid black;
   }
+  
+  .cup {
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    border: 1px solid black;
+    
+    background-image: linear-gradient(180deg, rgba(0,30,133,1) 50%, white 50%);
+    background-size: 100% 35%;
+    
+    
+  }
+  
+  .top-cup {
+    position: absolute; 
+    left: 255px;
+    bottom: 330px;
+  }
+  
+  
+  .middle-cup {
+    position: absolute; 
+    left: 230px;
+    bottom: 155px;
+  }
+  
+  .bottom-cup {
+    border: 1px solid black;
+/*     don't use relative for css art  */
+    position: absolute; 
+    left: 230px;
+    bottom: 50px;
+  }
+  
+/*   .stripe {
+    width: 100%;
+    height: 20px;
+    background-color: darkblue;
+    margin-bottom: 11px;
+  } */
 
 </style>
 
 
 <div class="frame">
 	<!-- ur HTML code goes here -->  
+  <div class="cup top-cup"></div>
+  <div class="cup middle-cup"></div>
+  <div class="cup bottom-cup"></div>
+ 
+    
 </div>
