@@ -1,3 +1,4 @@
+<!-- refer to css gradient, and clippy for shapes, 8 point full control for fancy shapes -->
 <style>
   
   * { box-sizing: border-box; }
@@ -18,28 +19,47 @@
   }
   
   .cup {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     background-color: white;
     border: 1px solid black;
     
-    background-image: linear-gradient(180deg, rgba(0,30,133,1) 50%, white 50%);
-    background-size: 100% 35%;
+    background-image: 
+      linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%),
+    
+      linear-gradient(180deg, rgba(0,30,133,1) 50%, white 50%);
+    
+    background-size: 100% 100%, 100% 35%;
     
     
+    border-radius: 51% 49% 0% 0% / 7% 6% 10% 10% ;
   }
   
-  .top-cup {
+  .back_cup {
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border: 1px solid black;
+    
+    background-image: 
+    
+      linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%),
+      
+      linear-gradient(180deg, rgba(0,30,133,1) 50%, white 50%);
+    
+    background-size: 100% 35%;
+    
+    border-radius: 51% 49% 0% 0% / 7% 6% 10% 10% ;
     position: absolute; 
     left: 255px;
-    bottom: 330px;
+    bottom: 320px;
   }
   
   
   .middle-cup {
     position: absolute; 
     left: 230px;
-    bottom: 155px;
+    bottom: 142px;
   }
   
   .bottom-cup {
@@ -47,24 +67,79 @@
 /*     don't use relative for css art  */
     position: absolute; 
     left: 230px;
-    bottom: 50px;
+    bottom: 60px;
   }
   
-/*   .stripe {
-    width: 100%;
-    height: 20px;
-    background-color: darkblue;
+  .cup::before {
+    content: '';
+    position: absolute;
+    left: 40px;
+    background: red;
+    width: 75%;
+    height: 95%;
+    clip-path: polygon(69% 47%, 0% 100%, 0 0);
+  }
+  
+  .cup::after {
+    content: '';
+    position: absolute;
+    left: 35px;
+    background: white;
+    width: 30%;
+    height: 30%;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transform: translate(8px, 30px) scale(0.8);
+    
+  }
+  
+  .handle {
+    width: 25%;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    background-color: white;
     margin-bottom: 11px;
-  } */
-
+  }
+  
+  .kettle {
+    width: 30%;
+    height: 88px;
+    position: absolute;
+    top: 90px;
+    left: 106px;
+    background-color: darkorange;
+    margin-bottom: 11px;
+    border-radius: 100% 22% 0% 0% / 40% 3% 10% 25% ; 
+  }
+  
+  .kettle::after {
+    content: '';
+    position: absolute;
+    left: 35px;
+    background: orange;
+    width: 30%;
+    height: 30%;
+  }
+  
 </style>
 
 
 <div class="frame">
 	<!-- ur HTML code goes here -->  
-  <div class="cup top-cup"></div>
-  <div class="cup middle-cup"></div>
-  <div class="cup bottom-cup"></div>
+  <div class="back_cup">
+  </div>
+  
+  <div class="cup middle-cup">
+    <div class="handle"></div>
+  </div>
+  
+  <div class="cup bottom-cup">
+    <div class="handle"></div>
+  </div>
+  
+  <div class="kettle">
+    
+  </div>
  
     
 </div>
