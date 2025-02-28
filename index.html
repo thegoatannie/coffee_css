@@ -108,6 +108,30 @@
     margin-bottom: 11px;
   }
   
+  .handle::after {
+    content: '';
+    position: absolute;
+    left: 1px;
+    top: 40px;
+    background: hsl(0, 0%, 87%);
+    width: 100%;
+    height: 25%;
+    clip-path: polygon(57% 18%, 51% 11%, 38% 10%, 33% 17%, 31% 25%, 29% 35%, 29% 42%, 29% 50%, 30% 58%, 31% 64%, 32% 69%, 34% 75%, 40% 78%, 44% 79%, 48% 81%, 55% 78%, 58% 77%, 61% 71%, 61% 64%, 56% 64%, 52% 67%, 49% 68%, 44% 66%, 43% 69%, 44% 59%, 42% 50%, 42% 45%, 42% 38%, 43% 31%, 45% 25%, 47% 24%, 50% 27%, 53% 28%, 56% 30%, 58% 30%);
+    transform: scale(3.5);
+  }
+  
+  .handle_back_cup {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    background: hsl(0, 0%, 87%);
+    width: 20%;
+    height: 30%;
+    clip-path: polygon(22% 18%, 47% 8%, 77% 20%, 78% 54%, 61% 75%, 25% 71%, 23% 54%, 49% 61%, 66% 49%, 67% 31%, 54% 21%, 35% 25%, 23% 30%);
+    transform: scale(4);
+    box-shadow: 0 0 0 2px black;
+  }
+  
   .kettle {
     width: 20%;
     height: 88px;
@@ -184,7 +208,17 @@
   .can_text {
     font-size: 25px;
     position: absolute;
-    left: 60px;
+    left: 105px;
+    top: 60px;
+    font-family: 'Diplomata', sans-serif;
+    display: inline-block; 
+    transform: scaleY(2); 
+  }
+  
+  .can_text_left {
+    font-size: 25px;
+    position: absolute;
+    left: 0px;
     top: 60px;
     font-family: 'Diplomata', sans-serif;
     display: inline-block; 
@@ -203,12 +237,16 @@
     </div>
   </div>
   <div class="cans">
-    <div class="can_text_right"> CAFE BUSTE
+    <div class="can_text"> CAF BUST
+    </div>
+    <div class="can_text_left"> E <br>ELO
     </div>
   </div>
   
   
   <div class="back_cup">
+    <div class="handle_back_cup">
+    </div>
   </div>
   
   <div class="cup middle-cup">
