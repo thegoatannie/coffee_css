@@ -25,11 +25,23 @@
     border: 1px solid black;
   }
   
+  .shadow {
+    position: absolute;
+    width: 470px;
+    height: 300px;
+    top: 280px;
+    left: 30px;
+    background-color: black;
+    clip-path: ellipse(43% 6% at 50% 50%);
+    filter: blur(100px);
+    opacity: 5; 
+  }
+  
   .cup {
     width: 90px;
     height: 90px;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid blue;
     
     background-image: 
       linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%),
@@ -46,7 +58,7 @@
     width: 90px;
     height: 90px;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid gray;
     
     background-image: 
     
@@ -101,7 +113,7 @@
   
   .handle {
     width: 25%;
-    height: 100px;
+    height: 80px;
     position: absolute;
     left: 20px;
     background-color: white;
@@ -346,11 +358,54 @@
     background-color: yellow;
     box-shadow: 0px 1px 0px hsl(29, 57%, 52%);
   }
+  
+  .can_rim_highlight_right {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: -10px;
+    left: 170px;
+    background-color: hsl(49, 100%, 95%);
+  }
+  
+  .can_rim_highlight_left {
+    width: 100%;
+    height: 5px;
+    position: absolute;
+    top: 2px;
+    left: 70px;
+    background-color: hsl(49, 100%, 95%);
+  }
+
+  .quaker {
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    background-image: url("quaker.png");
+    background-position: center;
+    background-size: 70px;
+    clip-path: polygon(49% 100%, 0 0, 100% 0);
+  }
+  
+  .quaker_blue {
+    width: 35%;
+    height: 20px;
+    position: absolute;
+    top: 60px;
+    left: 35px;
+    background-color: darkblue;
+    clip-path: polygon(49% 100%, 0 0, 100% 0);
+    transform: rotate(180deg);
+  }
 </style>
 
 
 <div class="frame">
 	<!-- ur HTML code goes here -->  
+  <div class="shadow">
+  </div>
   <div class="kettle"> 
     <div class="kettle_handle">  
     </div>
@@ -377,6 +432,16 @@
     </div>
     <div class="can_rim_left">
     </div>
+    <div class="can_rim_highlight_left">
+    </div>
+    <div class="can_rim_highlight_right">
+    </div>
+    <div class="quaker_blue">
+    </div>
+    <div class="quaker">
+    </div>
+    
+    
   </div>
   <div class="red_text_left"> MY PICTURE IS TOO &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp SMALL TO SEE  WHAT THIS SAYS
     </div>
@@ -386,7 +451,6 @@
   </div>
   <div class="net_weight_left"> GHT (170g) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp NET WT
   </div>
-  
   
   <div class="back_cup">
     <div class="handle_back_cup">
