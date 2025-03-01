@@ -132,22 +132,33 @@
     box-shadow: 0 0 0 2px black;
   }
   
+  .kettle::before {
+    content: '';
+    position: absolute;
+    left: 60px;
+    bottom: 88px;
+    background: black;
+    width: 40%;
+    height: 30%;
+    clip-path: polygon(8% 0%, 90% 0%, 100% 11%, 100% 23%, 82% 100%, 16% 100%, 0% 22%, 0% 10%);
+  }
+  
   .kettle {
     width: 20%;
     height: 88px;
     position: absolute;
     top: 90px;
     left: 156px;
-    background-color: darkorange;
+    background-color: rgb(255, 81, 0);
     margin-bottom: 11px;
-    border-radius: 100% 22% 0% 0% / 40% 3% 10% 25% ; 
+    border-radius: 100% 22% 0% 0% / 40% 3% 10% 25% ;
   }
   
   .kettle::after {
     content: '';
     position: absolute;
     left: 0px;
-    background: orange;
+    background: rgb(255, 118, 0);
     width: 100%;
     height: 30%;
     border-radius: 100% 22% 0% 0% / 100% 3% 10% 25% ;
@@ -224,12 +235,113 @@
     display: inline-block; 
     transform: scaleY(2); 
   }
+  
+  .kettle_handle {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 170px;
+    background-color: black;
+    clip-path: polygon(14% 0%, 32% 10%, 46% 45%, 56% 93%, 54% 100%, 13% 100%, 0% 21%, 2% 0%);
+  }
+  
+  .kettle_nub {
+    width: 50%;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    background-color: black;
+    clip-path: polygon(27% 0%, 89% 7%, 69% 19%, 63% 27%, 29% 19%, 26% 12%);
+  }
+  
+  .kettle_highlight {
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    top: 18px;
+    left: 0px;
+    background-color: white;
+    clip-path: polygon(0 0, 100% 7%, 99% 17%, 0 7%);
+  }
+  
+  .kettle_nub_tri {
+    width: 40%;
+    height: 40px;
+    position: absolute;
+    top: 33px;
+    left: 22px;
+    background-color: rgb(255, 130, 0);
+    clip-path: polygon(16% 6%, 30% 2%, 59% 0%, 75% 0%, 86% 0%, 61% 98%);
+    transform: rotate(-10deg);
+  }
+  
+  .kettle_nub_highlight {
+    width: 40%;
+    height: 40px;
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    background-color: white;
+    clip-path: polygon(31% 0%, 23% 7%, 19% 23%, 19% 38%, 61% 48%, 70% 29%, 79% 15%, 88% 8%, 93% 5%, 83% 21%, 78% 29%, 70% 38%, 66% 53%, 66% 60%, 13% 47%, 13% 26%, 16% 11%);
+  }
+  
+  .red_text_left {
+    font-size: 8px;
+    position: absolute;
+    left: 65px;
+    top: 370px;
+    display: inline-block; 
+    color: white;
+    transform: scaleY(2); 
+  }
+  
+  .red_text_right {
+    font-size: 8px;
+    position: absolute;
+    left: 320px;
+    top: 355px;
+    display: inline-block; 
+    color: white;
+    transform: scaleY(2); 
+  }
+  
+  .net_weight_left {
+    font-size: 8px;
+    position: absolute;
+    left: 63px;
+    top: 415px;
+    display: inline-block; 
+    color: white;
+    transform: scaleY(2); 
+  }
+  
+  .net_weight_right {
+    font-size: 8px;
+    position: absolute;
+    left: 325px;
+    top: 405px;
+    display: inline-block; 
+    color: white;
+    transform: scaleY(2); 
+  }
 </style>
 
 
 <div class="frame">
 	<!-- ur HTML code goes here -->  
   <div class="kettle"> 
+    <div class="kettle_handle">  
+    </div>
+    <div class="kettle_nub">
+    </div>
+    <div class="kettle_nub_tri">
+    </div>
+    <div class="kettle_highlight">
+    </div>
+    <div class="kettle_nub_highlight">
+    </div>
   </div>
   
   <div class="cans right">
@@ -241,6 +353,14 @@
     </div>
     <div class="can_text_left"> E <br>ELO
     </div>
+  </div>
+  <div class="red_text_left"> MY PICTURE IS TOO &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp SMALL TO SEE  WHAT THIS SAYS
+    </div>
+  <div class="red_text_right"> MY PICTURE IS TOO SMALL TO SEE 
+    </div>
+  <div class="net_weight_right"> NET WEIGHT (170g)
+  </div>
+  <div class="net_weight_left"> GHT (170g) &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp NET WT
   </div>
   
   
